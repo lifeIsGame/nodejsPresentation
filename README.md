@@ -42,29 +42,7 @@ The official website can be found at [nodejs.org](http://nodejs.org)
 *For detail option use:*
     
     $ express -h
-    
-*Structure application:*
-
-    .
-    ??? app.js
-    ??? bin
-    ?   ??? www
-    ??? package.json
-    ??? public
-    ?   ??? images
-    ?   ??? javascripts
-    ?   ??? stylesheets
-    ?       ??? style.css
-    ??? routes
-    ?   ??? index.js
-    ?   ??? users.js
-    ??? views
-        ??? error.jade
-        ??? index.jade
-        ??? layout.jade
-    
-    7 directories, 9 files
-    
+        
 *To view the command options, use the -h option:*
     
     $ DEBUG=myapp nodemon ./bin/www 
