@@ -52,6 +52,47 @@ The official website can be found at [nodejs.org](http://nodejs.org)
 [Official site](http://redis.io/)
 >Redis is an open source, BSD licensed, advanced key-value cache and store.
 
-## redis - a node.js redis client
+###Install
 
-    $ npm install redis
+*Windows:*
+
+[Download 32 or 64](https://github.com/rgl/redis/downloads)
+
+*Debian/Ubuntu:*
+
+    $ wget http://download.redis.io/redis-stable.tar.gz
+    $ tar xvzf redis-stable.tar.gz
+    $ cd redis-stable
+    $ make
+    
+*Mac OS:*
+    
+    $ brew install redis
+    
+###Starting Redis
+
+*Debian/Ubuntu:*
+
+    $ redis-server
+    [28550] 20 Aug 01:29:28 # Warning: no config file specified, using the default config. 
+    [28550] 20 Aug 01:29:28 * Server started, Redis version 2.8.7
+    [28550] 20 Aug 01:29:28 * The server is now ready to accept connections on port 6379
+    ... more logs ...
+    
+*Mac OS:*
+
+    $ brew services start redis
+    
+###Check if Redis is working
+    
+    $ redis-cli                                                                
+    redis 127.0.0.1:6379> ping
+    PONG
+    redis 127.0.0.1:6379> set mykey somevalue
+    OK
+    redis 127.0.0.1:6379> get mykey
+    "somevalue"
+    
+#Node-Redis-Socket.io
+
+    $ git clone https://github.com/lifeIsGame/node-redis-socket.io
